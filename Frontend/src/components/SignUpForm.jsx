@@ -52,33 +52,27 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
     };
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose} isCentered>
+        <Modal isOpen={isOpen} onClose={onClose} isCentered >
             <ModalOverlay bg="rgba(0, 0, 0, 0.6)" backdropFilter="blur(10px)" />
             <ModalContent
                 maxW={{ base: '90%', sm: '80%', md: '500px' }}
                 width="auto"
-                borderRadius="md"
-                boxShadow="md"
+                borderRadius="lg"
+                boxShadow="lg"
                 bg="white"
-                p={6}
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="center"
-                mx="auto"
-                my="auto"
+                p={8} // Increased padding
             >
                 <ModalHeader
                     textAlign="center"
                     fontSize="2xl"
                     fontWeight="bold"
                     borderBottom="1px solid #ddd"
-                    p={4}
+                    p={6} // Increased padding
                 >
                     Sign Up
                 </ModalHeader>
-                <ModalBody p={4}>
-                    <VStack spacing={5} align="stretch" width="full">
+                <ModalBody p={6}> {/* Increased padding */}
+                    <VStack spacing={6} align="stretch" width="full"> {/* Increased spacing */}
                         <FormControl isRequired>
                             <Input
                                 placeholder="First Name"
@@ -86,10 +80,12 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                                 onChange={(e) => setFirstName(e.target.value)}
                                 variant="outline"
                                 size="lg"
-                                borderColor="gray.300"
-                                _placeholder={{ color: 'gray.500' }}
+                                borderColor="gray.400"
+                                _placeholder={{ color: 'gray.600' }}
                                 borderRadius="md"
                                 boxShadow="sm"
+                                height="50px" 
+                                                              fontSize="lg" 
                             />
                         </FormControl>
                         <FormControl isRequired>
@@ -99,10 +95,12 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                                 onChange={(e) => setLastName(e.target.value)}
                                 variant="outline"
                                 size="lg"
-                                borderColor="gray.300"
-                                _placeholder={{ color: 'gray.500' }}
+                                borderColor="gray.400"
+                                _placeholder={{ color: 'gray.600' }}
                                 borderRadius="md"
                                 boxShadow="sm"
+                                height="50px" // Increased height for larger input fields
+                                fontSize="lg" // Increased font size
                             />
                         </FormControl>
                         <FormControl isRequired>
@@ -113,10 +111,12 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                                 onChange={(e) => setEmail(e.target.value)}
                                 variant="outline"
                                 size="lg"
-                                borderColor="gray.300"
-                                _placeholder={{ color: 'gray.500' }}
+                                borderColor="gray.400"
+                                _placeholder={{ color: 'gray.600' }}
                                 borderRadius="md"
                                 boxShadow="sm"
+                                height="50px" // Increased height for larger input fields
+                                fontSize="lg" // Increased font size
                             />
                         </FormControl>
                         <FormControl isRequired>
@@ -127,29 +127,31 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 variant="outline"
                                 size="lg"
-                                borderColor="gray.300"
-                                _placeholder={{ color: 'gray.500' }}
+                                borderColor="gray.400"
+                                _placeholder={{ color: 'gray.600' }}
                                 borderRadius="md"
                                 boxShadow="sm"
+                                height="50px" // Increased height for larger input fields
+                                fontSize="lg" // Increased font size
                             />
                         </FormControl>
                     </VStack>
                 </ModalBody>
-                <ModalFooter p={4} borderTop="1px solid #ddd">
+                <ModalFooter p={6} borderTop="1px solid #ddd"> {/* Increased padding */}
                     <Box display="flex" justifyContent="center" width="full">
                         <Button
                             colorScheme="blue"
-                            mr={3}
+                            mr={4}
                             onClick={handleSignUp}
                             size="lg"
-                            px={6}
-                            py={3}
+                            px={8} // Increased padding for larger buttons
+                            py={4}
                             borderRadius="md"
-                            fontSize="lg"
+                            fontSize="lg" // Increased font size
                             backgroundColor="#007bff"
                             color="#ffffff"
                             border="none"
-                            _hover={{ opacity: 0.8 }}
+                            _hover={{ opacity: 0.9 }}
                             transition="background-color 0.3s"
                         >
                             Sign Up
@@ -158,13 +160,13 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                             variant="outline"
                             onClick={onClose}
                             size="lg"
-                            px={6}
-                            py={3}
+                            px={8} // Increased padding for larger buttons
+                            py={4}
                             borderRadius="md"
-                            fontSize="lg"
+                            fontSize="lg" // Increased font size
                             borderColor="#ccc"
                             color="#007bff"
-                            _hover={{ borderColor: '#007bff', color: '#007bff' }}
+                            _hover={{ borderColor: '#007bff', color: '#007bff', opacity: 0.8 }}
                             transition="color 0.3s, border-color 0.3s"
                         >
                             Cancel

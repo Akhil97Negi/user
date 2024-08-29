@@ -102,7 +102,7 @@
 import { useEffect, useState } from "react";
 import { deleteUser, exportUsers, fetchUsers } from "../api/api";
 import DeleteUser from "./DeleteUser";
-import './UserTable.css'; // Make sure to import the CSS file
+import './UserTable.css'; 
 
 const UserTable = ({ onUserAdded }) => {
     const [users, setUsers] = useState([]);
