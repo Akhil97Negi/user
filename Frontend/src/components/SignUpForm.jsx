@@ -1,4 +1,3 @@
-// src/components/SignUpForm.js
 import React, { useState } from 'react';
 import {
     Modal,
@@ -10,7 +9,6 @@ import {
     Button,
     Input,
     FormControl,
-    FormLabel,
     Box,
     VStack,
     useToast,
@@ -60,20 +58,28 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                 maxW={{ base: '90%', sm: '80%', md: '500px' }}
                 width="auto"
                 borderRadius="md"
-                boxShadow="lg"
+                boxShadow="md"
                 bg="white"
                 p={6}
                 display="flex"
                 flexDirection="column"
                 alignItems="center"
+                justifyContent="center"
+                mx="auto"
+                my="auto"
             >
-                <ModalHeader textAlign="center" fontSize="2xl" fontWeight="bold">
+                <ModalHeader
+                    textAlign="center"
+                    fontSize="2xl"
+                    fontWeight="bold"
+                    borderBottom="1px solid #ddd"
+                    p={4}
+                >
                     Sign Up
                 </ModalHeader>
-                <ModalBody>
+                <ModalBody p={4}>
                     <VStack spacing={5} align="stretch" width="full">
                         <FormControl isRequired>
-                            <FormLabel fontSize="sm">First Name</FormLabel>
                             <Input
                                 placeholder="First Name"
                                 value={firstName}
@@ -81,10 +87,12 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                                 variant="outline"
                                 size="lg"
                                 borderColor="gray.300"
+                                _placeholder={{ color: 'gray.500' }}
+                                borderRadius="md"
+                                boxShadow="sm"
                             />
                         </FormControl>
                         <FormControl isRequired>
-                            <FormLabel fontSize="sm">Last Name</FormLabel>
                             <Input
                                 placeholder="Last Name"
                                 value={lastName}
@@ -92,10 +100,12 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                                 variant="outline"
                                 size="lg"
                                 borderColor="gray.300"
+                                _placeholder={{ color: 'gray.500' }}
+                                borderRadius="md"
+                                boxShadow="sm"
                             />
                         </FormControl>
                         <FormControl isRequired>
-                            <FormLabel fontSize="sm">Email</FormLabel>
                             <Input
                                 type="email"
                                 placeholder="Email"
@@ -104,10 +114,12 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                                 variant="outline"
                                 size="lg"
                                 borderColor="gray.300"
+                                _placeholder={{ color: 'gray.500' }}
+                                borderRadius="md"
+                                boxShadow="sm"
                             />
                         </FormControl>
                         <FormControl isRequired>
-                            <FormLabel fontSize="sm">Password</FormLabel>
                             <Input
                                 type="password"
                                 placeholder="Password"
@@ -116,12 +128,15 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                                 variant="outline"
                                 size="lg"
                                 borderColor="gray.300"
+                                _placeholder={{ color: 'gray.500' }}
+                                borderRadius="md"
+                                boxShadow="sm"
                             />
                         </FormControl>
                     </VStack>
                 </ModalBody>
-                <ModalFooter>
-                    <Box display="flex" justifyContent="center" width="full" mt={4}>
+                <ModalFooter p={4} borderTop="1px solid #ddd">
+                    <Box display="flex" justifyContent="center" width="full">
                         <Button
                             colorScheme="blue"
                             mr={3}
@@ -131,6 +146,11 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                             py={3}
                             borderRadius="md"
                             fontSize="lg"
+                            backgroundColor="#007bff"
+                            color="#ffffff"
+                            border="none"
+                            _hover={{ opacity: 0.8 }}
+                            transition="background-color 0.3s"
                         >
                             Sign Up
                         </Button>
@@ -142,6 +162,10 @@ const SignUpForm = ({ isOpen, onClose, onUserAdded }) => {
                             py={3}
                             borderRadius="md"
                             fontSize="lg"
+                            borderColor="#ccc"
+                            color="#007bff"
+                            _hover={{ borderColor: '#007bff', color: '#007bff' }}
+                            transition="color 0.3s, border-color 0.3s"
                         >
                             Cancel
                         </Button>

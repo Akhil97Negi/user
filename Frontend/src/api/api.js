@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5010/api/users'
+const API_URL = 'https://user-dj33.onrender.com/api/users'
 
 //get all users
 export const fetchUsers = async () =>{
